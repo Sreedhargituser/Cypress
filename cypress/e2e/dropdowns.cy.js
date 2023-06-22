@@ -8,7 +8,7 @@ describe("Other actions", {defaultCommandTimeout: 5000},()=>{
         // Drop downs
 
         //static dropdown
-        cy.get('#menuform', {timeout: 10000}).contains('Dropdown').click();
+        cy.get('#menuform').contains('Dropdown').click();
         cy.get('select[class="ui-selectonemenu"]').select(3).should('have.value', "Puppeteer");
         
         //dynamic dropdown
